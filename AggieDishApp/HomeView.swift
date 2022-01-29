@@ -29,7 +29,10 @@ struct CardList: View {
     var body: some View {
         ScrollView {
             ForEach(restaurants, id: \.id) { restaurant in
-                Card(restaurant: restaurant)
+                NavigationLink(destination: MenuView()) {
+                    Card(restaurant: restaurant)
+                }
+                
             }
         }
         .background(Color(red: 245 / 255, green: 245 / 255, blue: 245 / 255))
@@ -41,91 +44,96 @@ struct Card: View {
     var restaurant: Restaurant
     var body: some View {
         VStack (alignment: .leading) {
+            VStack {
                 VStack {
-                    VStack {
-                        VStack (alignment: .leading){
-                            ZStack(alignment: .topTrailing) {
-                                Image(restaurant.restaurantImage)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .cornerRadius(12)
-                                HStack {
-                                    Image(systemName: "bag")
-                                        .foregroundColor(Color.black)
-                                        .padding([.top, .bottom], 7)
-                                        .padding(.leading, 15)
-                                    Text (restaurant.expectPickupTime)
-                                        .font(.subheadline.weight(.medium))
-                                        .foregroundColor(.secondary)
-                                        .padding(.trailing, 15)
-                                }
-                                .background(Color.white)
-                                .cornerRadius(15)
-                                .offset(x: -10.0, y: 10.0)
+                    VStack (alignment: .leading){
+                        ZStack(alignment: .topTrailing) {
+                            Image(restaurant.restaurantImage)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .cornerRadius(12)
+                            HStack {
+                                Image(systemName: "bag")
+                                    .foregroundColor(Color.black)
+                                    .padding([.top, .bottom], 7)
+                                    .padding(.leading, 15)
+                                Text (restaurant.expectPickupTime)
+                                    .font(.subheadline.weight(.medium))
+                                    .foregroundColor(.secondary)
+                                    .padding(.trailing, 15)
                             }
-                            VStack (alignment: .leading){
-                                Text (restaurant.restaurantName)
-                                    .font(.title2.weight(.bold))
-                                    .lineLimit(3)
-                                    .padding([.top, .bottom], 2)
-                                HStack {
-                                    Image(systemName: "clock")
-                                        .foregroundColor(Color.red)
-                                        .padding([.trailing, .bottom], 1)
-                                    Text (restaurant.openHours)
-                                        .font(.subheadline.weight(.medium))
-                                        .foregroundColor(.secondary)
-                                }
-                                HStack {
-                                    Image(systemName: "map")
-                                        .foregroundColor(Color.red)
-                                        .padding(.trailing, 1)
-                                    Text (restaurant.location)
-                                        .font(.subheadline.weight(.medium))
-                                        .foregroundColor(.secondary)
-                                }
-                            }
-                            .padding([.leading, .trailing])
-
+                            .background(Color.white)
+                            .cornerRadius(15)
+                            .offset(x: -10.0, y: 10.0)
                         }
-                        .padding()
-                        .background(Color.white)
+                        VStack (alignment: .leading){
+                            Text (restaurant.restaurantName)
+                                .font(.title2.weight(.bold))
+                                .lineLimit(3)
+                                .padding([.top, .bottom], 2)
+                                .foregroundColor(.black)
+                            HStack {
+                                Image(systemName: "clock")
+                                    .foregroundColor(Color.red)
+                                    .padding([.trailing, .bottom], 1)
+                                Text (restaurant.openHours)
+                                    .font(.subheadline.weight(.medium))
+                                    .foregroundColor(.secondary)
+                            }
+                            HStack {
+                                Image(systemName: "map")
+                                    .foregroundColor(Color.red)
+                                    .padding(.trailing, 1)
+                                Text (restaurant.location)
+                                    .font(.subheadline.weight(.medium))
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        .padding([.leading, .trailing])
+
                     }
-                    .cornerRadius(12)
-                    .padding([.top, .horizontal])
-                    .background(Color(red: 245 / 255, green: 245 / 255, blue: 245 / 255))
+                    .padding()
+                    .background(Color.white)
                 }
+                .cornerRadius(12)
+                .padding([.top, .horizontal])
+                .background(Color(red: 245 / 255, green: 245 / 255, blue: 245 / 255))
             }
+        }
     }
 }
 
 struct HomeView: View {
     var body: some View {
-        VStack (alignment: .leading) {
+        NavigationView {
             VStack (alignment: .leading) {
-                Group {
-                    Text("Hi, ") +
-                    Text("Jane").foregroundColor(Color.red) +
-                    Text(".")
-                }
-                .font(.title.weight(.bold))
-                .lineLimit(1)
-
-                Text("Welcome Back!")
+                VStack (alignment: .leading) {
+                    Group {
+                        Text("Hi, ") +
+                        Text("Jane").foregroundColor(Color.red) +
+                        Text(".")
+                    }
                     .font(.title.weight(.bold))
                     .lineLimit(1)
-                    .padding(.bottom, 2)
-                Text("Here are some options to get you started.\n")
-                    .font(.headline.weight(.medium))
-                Text("On Campus Eats")
-                    .font(.title2.weight(.bold))
 
+                    Text("Welcome Back!")
+                        .font(.title.weight(.bold))
+                        .lineLimit(1)
+                        .padding(.bottom, 2)
+                    Text("Here are some options to get you started.\n")
+                        .font(.headline.weight(.medium))
+                    Text("On Campus Eats")
+                        .font(.title2.weight(.bold))
+                }
+                .padding(30)
+
+                CardList()
             }
-            .padding(30)
-
-            CardList()
+            .background(Color(red: 245 / 255, green: 245 / 255, blue: 245 / 255))
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
         }
-        .background(Color(red: 245 / 255, green: 245 / 255, blue: 245 / 255))
+        
     }
 }
 

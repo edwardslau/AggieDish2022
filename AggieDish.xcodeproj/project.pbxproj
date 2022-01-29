@@ -7,57 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30CF3402279F501000E67B37 /* testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF3401279F501000E67B37 /* testApp.swift */; };
-		30CF3404279F501000E67B37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF3403279F501000E67B37 /* ContentView.swift */; };
+		301B77F027A4EDD60098907B /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 301B77EF27A4EDD60098907B /* restaurants.json */; };
+		301B77F427A504AA0098907B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B77F327A504AA0098907B /* HomeView.swift */; };
+		30CF3402279F501000E67B37 /* aggieDishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF3401279F501000E67B37 /* aggieDishApp.swift */; };
 		30CF3406279F501000E67B37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CF3405279F501000E67B37 /* Assets.xcassets */; };
 		30CF3409279F501000E67B37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CF3408279F501000E67B37 /* Preview Assets.xcassets */; };
-		30CF342C27A3829000E67B37 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF342B27A3829000E67B37 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		30CF340F279F501100E67B37 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 30CF33F6279F501000E67B37 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 30CF33FD279F501000E67B37;
-			remoteInfo = test;
-		};
-		30CF3419279F501100E67B37 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 30CF33F6279F501000E67B37 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 30CF33FD279F501000E67B37;
-			remoteInfo = test;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		30CF33FE279F501000E67B37 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		30CF3401279F501000E67B37 /* testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testApp.swift; sourceTree = "<group>"; };
-		30CF3403279F501000E67B37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		301B77EF27A4EDD60098907B /* restaurants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
+		301B77F327A504AA0098907B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		30CF33FE279F501000E67B37 /* AggieDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AggieDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30CF3401279F501000E67B37 /* aggieDishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aggieDishApp.swift; sourceTree = "<group>"; };
 		30CF3405279F501000E67B37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30CF3408279F501000E67B37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		30CF340E279F501100E67B37 /* testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		30CF3418279F501100E67B37 /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		30CF342B27A3829000E67B37 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		30CF33FB279F501000E67B37 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		30CF340B279F501100E67B37 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		30CF3415279F501100E67B37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -70,7 +37,7 @@
 		30CF33F5279F501000E67B37 = {
 			isa = PBXGroup;
 			children = (
-				30CF3400279F501000E67B37 /* test */,
+				30CF3400279F501000E67B37 /* AggieDishApp */,
 				30CF33FF279F501000E67B37 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,23 +45,21 @@
 		30CF33FF279F501000E67B37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30CF33FE279F501000E67B37 /* test.app */,
-				30CF340E279F501100E67B37 /* testTests.xctest */,
-				30CF3418279F501100E67B37 /* testUITests.xctest */,
+				30CF33FE279F501000E67B37 /* AggieDish.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		30CF3400279F501000E67B37 /* test */ = {
+		30CF3400279F501000E67B37 /* AggieDishApp */ = {
 			isa = PBXGroup;
 			children = (
-				30CF3401279F501000E67B37 /* testApp.swift */,
-				30CF3403279F501000E67B37 /* ContentView.swift */,
+				301B77EF27A4EDD60098907B /* restaurants.json */,
+				30CF3401279F501000E67B37 /* aggieDishApp.swift */,
 				30CF3405279F501000E67B37 /* Assets.xcassets */,
 				30CF3407279F501000E67B37 /* Preview Content */,
-				30CF342B27A3829000E67B37 /* CardView.swift */,
+				301B77F327A504AA0098907B /* HomeView.swift */,
 			);
-			path = test;
+			path = AggieDishApp;
 			sourceTree = "<group>";
 		};
 		30CF3407279F501000E67B37 /* Preview Content */ = {
@@ -108,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		30CF33FD279F501000E67B37 /* test */ = {
+		30CF33FD279F501000E67B37 /* AggieDish */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30CF3422279F501100E67B37 /* Build configuration list for PBXNativeTarget "test" */;
+			buildConfigurationList = 30CF3422279F501100E67B37 /* Build configuration list for PBXNativeTarget "AggieDish" */;
 			buildPhases = (
 				30CF33FA279F501000E67B37 /* Sources */,
 				30CF33FB279F501000E67B37 /* Frameworks */,
@@ -120,46 +85,10 @@
 			);
 			dependencies = (
 			);
-			name = test;
+			name = AggieDish;
 			productName = test;
-			productReference = 30CF33FE279F501000E67B37 /* test.app */;
+			productReference = 30CF33FE279F501000E67B37 /* AggieDish.app */;
 			productType = "com.apple.product-type.application";
-		};
-		30CF340D279F501100E67B37 /* testTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 30CF3425279F501100E67B37 /* Build configuration list for PBXNativeTarget "testTests" */;
-			buildPhases = (
-				30CF340A279F501100E67B37 /* Sources */,
-				30CF340B279F501100E67B37 /* Frameworks */,
-				30CF340C279F501100E67B37 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				30CF3410279F501100E67B37 /* PBXTargetDependency */,
-			);
-			name = testTests;
-			productName = testTests;
-			productReference = 30CF340E279F501100E67B37 /* testTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		30CF3417279F501100E67B37 /* testUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 30CF3428279F501100E67B37 /* Build configuration list for PBXNativeTarget "testUITests" */;
-			buildPhases = (
-				30CF3414279F501100E67B37 /* Sources */,
-				30CF3415279F501100E67B37 /* Frameworks */,
-				30CF3416279F501100E67B37 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				30CF341A279F501100E67B37 /* PBXTargetDependency */,
-			);
-			name = testUITests;
-			productName = testUITests;
-			productReference = 30CF3418279F501100E67B37 /* testUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -174,17 +103,9 @@
 					30CF33FD279F501000E67B37 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
-					30CF340D279F501100E67B37 = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 30CF33FD279F501000E67B37;
-					};
-					30CF3417279F501100E67B37 = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 30CF33FD279F501000E67B37;
-					};
 				};
 			};
-			buildConfigurationList = 30CF33F9279F501000E67B37 /* Build configuration list for PBXProject "test" */;
+			buildConfigurationList = 30CF33F9279F501000E67B37 /* Build configuration list for PBXProject "AggieDish" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -197,9 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				30CF33FD279F501000E67B37 /* test */,
-				30CF340D279F501100E67B37 /* testTests */,
-				30CF3417279F501100E67B37 /* testUITests */,
+				30CF33FD279F501000E67B37 /* AggieDish */,
 			);
 		};
 /* End PBXProject section */
@@ -210,21 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30CF3409279F501000E67B37 /* Preview Assets.xcassets in Resources */,
+				301B77F027A4EDD60098907B /* restaurants.json in Resources */,
 				30CF3406279F501000E67B37 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		30CF340C279F501100E67B37 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		30CF3416279F501100E67B37 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,40 +141,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30CF3404279F501000E67B37 /* ContentView.swift in Sources */,
-				30CF342C27A3829000E67B37 /* CardView.swift in Sources */,
-				30CF3402279F501000E67B37 /* testApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		30CF340A279F501100E67B37 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		30CF3414279F501100E67B37 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				301B77F427A504AA0098907B /* HomeView.swift in Sources */,
+				30CF3402279F501000E67B37 /* aggieDishApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		30CF3410279F501100E67B37 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 30CF33FD279F501000E67B37 /* test */;
-			targetProxy = 30CF340F279F501100E67B37 /* PBXContainerItemProxy */;
-		};
-		30CF341A279F501100E67B37 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 30CF33FD279F501000E67B37 /* test */;
-			targetProxy = 30CF3419279F501100E67B37 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		30CF3420279F501100E67B37 /* Debug */ = {
@@ -394,7 +272,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"test/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AggieDishApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -422,7 +300,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"test/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AggieDishApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -443,82 +321,10 @@
 			};
 			name = Release;
 		};
-		30CF3426279F501100E67B37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ruiyihe.testTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test.app/test";
-			};
-			name = Debug;
-		};
-		30CF3427279F501100E67B37 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ruiyihe.testTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test.app/test";
-			};
-			name = Release;
-		};
-		30CF3429279F501100E67B37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ruiyihe.testUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = test;
-			};
-			name = Debug;
-		};
-		30CF342A279F501100E67B37 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ruiyihe.testUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = test;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		30CF33F9279F501000E67B37 /* Build configuration list for PBXProject "test" */ = {
+		30CF33F9279F501000E67B37 /* Build configuration list for PBXProject "AggieDish" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30CF3420279F501100E67B37 /* Debug */,
@@ -527,29 +333,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30CF3422279F501100E67B37 /* Build configuration list for PBXNativeTarget "test" */ = {
+		30CF3422279F501100E67B37 /* Build configuration list for PBXNativeTarget "AggieDish" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30CF3423279F501100E67B37 /* Debug */,
 				30CF3424279F501100E67B37 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		30CF3425279F501100E67B37 /* Build configuration list for PBXNativeTarget "testTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				30CF3426279F501100E67B37 /* Debug */,
-				30CF3427279F501100E67B37 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		30CF3428279F501100E67B37 /* Build configuration list for PBXNativeTarget "testUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				30CF3429279F501100E67B37 /* Debug */,
-				30CF342A279F501100E67B37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

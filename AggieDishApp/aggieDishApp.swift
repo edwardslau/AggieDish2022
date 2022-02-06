@@ -11,7 +11,8 @@ import SwiftUI
 struct aggieDishApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            DefaultView()
+//            TestHomeView()
         }
     }
 }

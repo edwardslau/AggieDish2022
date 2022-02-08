@@ -17,6 +17,7 @@
 		30CF3402279F501000E67B37 /* aggieDishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF3401279F501000E67B37 /* aggieDishApp.swift */; };
 		30CF3406279F501000E67B37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CF3405279F501000E67B37 /* Assets.xcassets */; };
 		30CF3409279F501000E67B37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CF3408279F501000E67B37 /* Preview Assets.xcassets */; };
+		AF0ED97027B1F98E00B12E6A /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0ED96F27B1F98E00B12E6A /* CartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		30CF3401279F501000E67B37 /* aggieDishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aggieDishApp.swift; sourceTree = "<group>"; };
 		30CF3405279F501000E67B37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30CF3408279F501000E67B37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF0ED96F27B1F98E00B12E6A /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 				301B77F527A50B600098907B /* MenuView.swift */,
 				301B77F727A510A50098907B /* WalletView.swift */,
 				3063F1AB27A662D60028B766 /* CustomizationView.swift */,
+				AF0ED96F27B1F98E00B12E6A /* CartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				3063F1AC27A662D60028B766 /* CustomizationView.swift in Sources */,
 				301B77F627A50B600098907B /* MenuView.swift in Sources */,
 				30CF3402279F501000E67B37 /* aggieDishApp.swift in Sources */,
+				AF0ED97027B1F98E00B12E6A /* CartView.swift in Sources */,
 				301B77F827A510A50098907B /* WalletView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

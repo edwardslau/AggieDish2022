@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 struct MenuItem: View {
     var dishName: String
     var body: some View {
@@ -37,6 +38,7 @@ struct MenuItem: View {
 //}
 
 struct MenuView: View {
+    @State var isLinkActive = false
     var restaurant: Restaurant
     var body: some View {
         VStack{
@@ -57,6 +59,19 @@ struct MenuView: View {
             }
             .navigationTitle("Menu")
             .navigationBarTitleDisplayMode(.inline)
+            
+            
+            NavigationLink(destination: CartView(),isActive: $isLinkActive) {
+                Button(action: {
+                    self.isLinkActive = true
+                }){
+                    Image("basket-icon")
+                        .resizable()
+                        .frame(width: 60, height: 60, alignment: .trailing)
+                }
+            }
+            
+            Spacer()
         }
         .background(Color(red: 245 / 255, green: 245 / 255, blue: 245 / 255))
         

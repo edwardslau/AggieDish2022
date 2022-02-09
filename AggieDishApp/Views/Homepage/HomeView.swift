@@ -9,16 +9,24 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var showSortOptions = false
-    
+	
+	@EnvironmentObject var vm: UserAuthModel
+	
     var body: some View {
         NavigationView {
             VStack (alignment: .leading) {
                 ZStack (alignment: .topTrailing) {
                     VStack (alignment: .leading) {
                         Group {
-                            Text("Hi, ") +
-                            Text("Guest").foregroundColor(Color.red) +
-                            Text(".")
+							if (vm.isLoggedIn){
+								Text("Hi, ") +
+								Text(vm.givenName).foregroundColor(Color.red) +
+								Text(".")
+							} else {
+								Text("Hi, ") +
+								Text("Guest").foregroundColor(Color.red) +
+								Text(".")
+							}
                         }
                         .font(.title.weight(.bold))
                         .lineLimit(1)
@@ -71,7 +79,9 @@ struct HomeView: View {
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
+		.environmentObject(vm)
     }
+	
     
 }
 

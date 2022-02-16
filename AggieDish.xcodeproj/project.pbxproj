@@ -37,6 +37,8 @@
 		30CF3406279F501000E67B37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CF3405279F501000E67B37 /* Assets.xcassets */; };
 		30CF3409279F501000E67B37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CF3408279F501000E67B37 /* Preview Assets.xcassets */; };
 		979606FEBA0DB5E1DF990963 /* Pods_AggieDish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7176C848603A1CD21B51531 /* Pods_AggieDish.framework */; };
+		AF0E7F2F27BAED1D00766D1C /* orderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0E7F2E27BAED1D00766D1C /* orderView.swift */; };
+		AF0E7F3127BC8AE300766D1C /* OrderStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0E7F3027BC8AE300766D1C /* OrderStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		30CF3405279F501000E67B37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30CF3408279F501000E67B37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FB07D5B22912E3FFC695C2E /* Pods-AggieDish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AggieDish.release.xcconfig"; path = "Target Support Files/Pods-AggieDish/Pods-AggieDish.release.xcconfig"; sourceTree = "<group>"; };
+		AF0E7F2E27BAED1D00766D1C /* orderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderView.swift; sourceTree = "<group>"; };
+		AF0E7F3027BC8AE300766D1C /* OrderStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatusView.swift; sourceTree = "<group>"; };
 		E7176C848603A1CD21B51531 /* Pods_AggieDish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AggieDish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,11 +95,13 @@
 		3063F1A527A658760028B766 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AF0E7F2D27BAED0100766D1C /* OrderStatus */,
 				30B4401427AE3E58007641AF /* DefaultView.swift */,
 				30B4401E27AF358B007641AF /* Homepage */,
 				30B4401F27AF35CD007641AF /* UserAccount */,
 				30B4402727AF5F11007641AF /* Restaurants */,
 				30B4402027AF35EE007641AF /* Testing */,
+				AF0E7F3027BC8AE300766D1C /* OrderStatusView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,6 +269,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AF0E7F2D27BAED0100766D1C /* OrderStatus */ = {
+			isa = PBXGroup;
+			children = (
+				AF0E7F2E27BAED1D00766D1C /* orderView.swift */,
+			);
+			path = OrderStatus;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -397,10 +411,12 @@
 				3063F1AC27A662D60028B766 /* CustomizationView.swift in Sources */,
 				301B77F627A50B600098907B /* MenuView.swift in Sources */,
 				30B4400C27ADEC24007641AF /* TestHomeView.swift in Sources */,
+				AF0E7F2F27BAED1D00766D1C /* orderView.swift in Sources */,
 				30CF3402279F501000E67B37 /* aggieDishApp.swift in Sources */,
 				30B4403C27B081B0007641AF /* Menu.swift in Sources */,
 				30B4400A27ADE9CC007641AF /* TestView.swift in Sources */,
 				30B4400827ADDA62007641AF /* CartView.swift in Sources */,
+				AF0E7F3127BC8AE300766D1C /* OrderStatusView.swift in Sources */,
 				30B4401327AE2634007641AF /* CountDownView.swift in Sources */,
 				30B4400E27AE0E4B007641AF /* Extensions.swift in Sources */,
 				30B4401527AE3E58007641AF /* DefaultView.swift in Sources */,

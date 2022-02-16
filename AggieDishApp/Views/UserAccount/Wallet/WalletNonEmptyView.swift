@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct WalletNonEmptyView: View {
+    @State var isLinkActive = false
     var body: some View {
-
         ZStack(alignment: .bottom) {
 
             List {
@@ -17,7 +17,14 @@ struct WalletNonEmptyView: View {
                     Image("logo_mastercard")
                         .resizable()
                         .frame(width: 40, height: 30, alignment: .leading)
-                    Text("Card Ending with")
+                    Text("Card Ending with 1234")
+                    NavigationLink(destination: OrderStatusView(),isActive: $isLinkActive) {
+                    Button(action: {
+                        self.isLinkActive = true
+                    }){
+                    }.padding()
+                    }
+
                 }
                 .padding()
                 
@@ -43,14 +50,12 @@ struct WalletNonEmptyView: View {
                 }
                 .padding()
             }
-            
-            
-            
-            
-
             HStack {
                 Spacer()
-                NavigationLink(destination: AddPaymentView()) {
+                NavigationLink(destination: AddPaymentView(),isActive: $isLinkActive) {
+                Button(action: {
+                    self.isLinkActive = true
+                }){
                     Text("Add Payment Method")
                         .font(.body.weight(.medium))
                         .padding()
@@ -58,11 +63,14 @@ struct WalletNonEmptyView: View {
                         .background(Color.red)
                         .foregroundColor(.white)
                         .cornerRadius(15)
-                        .frame(maxHeight: .infinity, alignment: .bottom)
+                }.padding()
                 }
-                .padding()
-                Spacer()
             }
+            
+            
+            
+
+            
         }
         .navigationTitle("Saved Payment Method")
         .navigationBarTitleDisplayMode(.inline)

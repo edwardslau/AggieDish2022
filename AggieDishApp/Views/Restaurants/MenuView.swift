@@ -4,14 +4,18 @@
 //
 //  Created by Ruiyi He on 1/28/22.
 //
-
 import SwiftUI
 struct MenuItem: View {
     var dishName: String
+    var price: String
     var body: some View {
             HStack {
                 Text(dishName)
                 Spacer()
+                Text(price)
+                Button{}label:{
+                    Image(systemName: "plus.circle").foregroundColor(Color(.systemRed))
+                }
             }
             .frame(maxWidth: .infinity)
             .padding()
@@ -22,15 +26,15 @@ struct MenuItem: View {
 struct MenuItemList: View {
     var body: some View {
         VStack (alignment: .leading) {
-            MenuItem(dishName: "Burger")
-            MenuItem(dishName: "Burger2")
-            MenuItem(dishName: "Burger3")
-            MenuItem(dishName: "Burger4")
-            MenuItem(dishName: "Burger5")
-            MenuItem(dishName: "Burger6")
-            MenuItem(dishName: "Burger7")
-            MenuItem(dishName: "Burger8")
-            MenuItem(dishName: "Burger9")
+            MenuItem(dishName: "Burger",price: "$9.99")
+            MenuItem(dishName: "Burger2",price: "$9.99")
+            MenuItem(dishName: "Burger3",price: "$9.99")
+            MenuItem(dishName: "Burger4",price: "$9.99")
+            MenuItem(dishName: "Burger5",price: "$9.99")
+            MenuItem(dishName: "Burger6",price: "$9.99")
+            MenuItem(dishName: "Burger7",price: "$9.99")
+            MenuItem(dishName: "Burger8",price: "$9.99")
+            MenuItem(dishName: "Burger9",price: "$9.99")
         }
             
 //            ForEach(restaurants) { restaurant in

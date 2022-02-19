@@ -11,21 +11,16 @@ import SwiftUI
 import GoogleSignIn
 
 struct UserAccountView: View {
-    
-//    TODO: implement google login
-    
-    
-//    let signInConfig = GIDConfiguration.init(clientID: "YOUR_IOS_CLIENT_ID")
-    @State private var isLoggedIn: Bool = true
+	
+	@EnvironmentObject var user: UserAuthModel
     
     var body: some View {
-        if (isLoggedIn) {
-            SignInView()
+		if (user.isLoggedIn) {
+			SignOutView().environmentObject(user)
         } else {
-            SignOutView()
+			SignInView().environmentObject(user)
         }
-        
-    }
+	}
 }
 
 struct UserAccountView_Previews: PreviewProvider {
@@ -34,4 +29,3 @@ struct UserAccountView_Previews: PreviewProvider {
             .previewInterfaceOrientation(.portrait)
     }
 }
-

@@ -71,12 +71,29 @@ struct Card: View {
 }
 
 struct CardList: View {
+    var filters: [Bool] // dc, restaurant, coffee, silo
     var body: some View {
         ScrollView {
             ForEach(restaurants) { restaurant in
                 NavigationLink(destination: MenuView(restaurant: restaurant)) {
-//                isActive: $defaultPresenting
-                    Card(restaurant: restaurant)
+                    if (!filters[0] && !filters[1] && !filters[2] && !filters[3]) {
+                        Card(restaurant: restaurant)
+                    } else {
+                        if (filters[0] && restaurant.category == "DC") {
+                                Card(restaurant: restaurant)
+                        }
+                        if (filters[1] && restaurant.category == "Restaurants") {
+                                Card(restaurant: restaurant)
+                        }
+                        if (filters[2] && restaurant.category == "Coffee") {
+                                Card(restaurant: restaurant)
+                        }
+                        if (filters[3] && restaurant.category == "Silo") {
+                                Card(restaurant: restaurant)
+                        }
+                    }
+                    
+                    
                 }
             }
         }

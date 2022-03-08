@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+import "google/type/latlng.proto";
+import "protos/model/contact_info.proto";
+import "protos/model/cuisine.proto";
+import "protos/model/day_open.proto";
+import "protos/model/menu.proto";
+import "protos/model/payment_info.proto";
+import "protos/model/rating_info.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "EateryOuterClass";
+
+message Eatery {
+  google.protobuf.Int64Value mid = 1;
+
+  // The name of the eatery, e.g., "Segundo Dining Commons."
+  google.protobuf.StringValue name = 2;
+
+  // The primary cuisine associated with the eatery.
+  Cuisine cuisine = 3;
+
+  // The latitude and longitude that describe the eatery's location.
+  google.type.LatLng coordinates = 4;
+
+  // A short, user-facing representation of the eatery's location, e.g.,
+  // "Segundo." The precision of the location can vary for each eatery.
+  google.protobuf.StringValue location = 5;
+
+  // The eatery's payment information.
+  PaymentInfo payment_info = 6;
+
+  // The eatery's rating information.
+  RatingInfo rating = 7;
+
+  // The eatery's contact information.
+  ContactInfo contact_info = 8;
+
+  // The URL that locates a hero image for the eatery.
+  // TODO(#80): Change type to one that indicates a URL.
+  google.protobuf.StringValue image_url = 9;
+
+  google.protobuf.Int32Value price_level = 10;  // 1 through 3 dollar signs ($, $$, $$$)
+
+  // The eatery's open days. Each entry represents a day of the week.
+  repeated DayOpen day_open = 11;
+
+  // The eatery's menu.
+  Menu menu = 12;
+}

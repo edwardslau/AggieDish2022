@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package model;
+
+import "google/type/timeofday.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "DayOpenOuterClass";
+
+message DayOpen {
+  message TimeRange {
+    // The civil time at which the eatery opens.
+    google.type.TimeOfDay open_time = 1;
+
+    // The civil time at which the eatery closes.
+    google.type.TimeOfDay close_time = 2;
+  }
+  // The time intervals within the day during which the eatery is open.
+  repeated TimeRange time_range_open = 1;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "GetOrderRequestOuterClass";
+
+message GetOrderRequest {
+  // The identifier of the order to retrieve.
+  google.protobuf.StringValue order_id = 1;
+}

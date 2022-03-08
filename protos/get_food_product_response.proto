@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package model;
+
+import "protos/model/food_product.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "GetFoodProductResponseOuterClass";
+
+message GetFoodProductResponse {
+  FoodProduct food_product = 1;
+}

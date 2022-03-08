@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+import "protos/model/day_open.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "FoodProductOuterClass";
+
+message FoodProduct {
+  google.protobuf.StringValue name = 1;
+
+  google.protobuf.StringValue description = 2;
+
+  repeated google.protobuf.StringValue allergy_caution_tag = 3;
+
+  google.protobuf.StringValue cuisine = 4;
+
+  message SubItem {
+    google.protobuf.StringValue name = 1;
+  }
+  repeated SubItem sub_item = 5;
+
+  repeated DayOpen.TimeRange time_range_served = 7;
+
+  google.protobuf.StringValue id = 8;
+
+  google.protobuf.StringValue image = 9;
+
+  google.protobuf.DoubleValue price = 10;
+}

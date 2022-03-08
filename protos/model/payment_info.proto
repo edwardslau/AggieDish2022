@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "PaymentInfoOuterClass";
+
+// Information about an eatery's payment policies.
+message PaymentInfo {
+  // Whether the eatery accepts payment with cash.
+  google.protobuf.BoolValue accepts_cash = 1;
+
+  // Whether the eatery accepts payment with credit card.
+  google.protobuf.BoolValue accepts_credit_card = 2;
+
+  // Whether the eatery accepts payment with credit card.
+  google.protobuf.BoolValue accepts_cash_equivalent = 3;
+
+  // A list of mids that represent the cash equivalents accepted by the eatery.
+  //
+  // The value of this field is undefined when accepts_cash_equivalent is not
+  // true, so clients should check that accepts_cash_equivalent is true before
+  // using this field.
+  repeated google.protobuf.Int64Value accepted_cash_equivalent_mid = 4;
+}

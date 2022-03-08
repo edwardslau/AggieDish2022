@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package model;
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "OrderStatusOuterClass";
+
+enum OrderStatus {
+  ORDER_UNSPECIFIED = 0;
+  ORDER_SUBMITTED = 1;
+  ORDER_ACCEPTED = 2;
+  ORDER_IN_PROGRESS = 3;
+  ORDER_DELIVERY_IN_PROGRESS = 4;
+  ORDER_COMPLETE = 5;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package model;
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "CuisineOuterClass";
+
+enum Cuisine {
+  AMERICAN = 0;
+  MEXICAN = 1;
+  THAI = 2;
+  JAPANESE = 3;
+  CHINESE = 4;
+  VIETNAMESE = 5;
+  INDIAN = 6;
+  DESSERTS = 7;
+}

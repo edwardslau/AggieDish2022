@@ -1,0 +1,138 @@
+[
+    {
+        "id": 1,
+        "restaurantImage": "https://housing.ucdavis.edu/_images/buildings/dining/tercero-dc-4B7A3178-1600x800.jpg",
+        "restaurantName": "Tercero Dining Commons",
+        "category": "DC",
+        "openHours": "9am - 8pm",
+        "pickupLocation": "Second Floor",
+        "location": "237 Tercero Hall Cir, Davis, CA 95616",
+        "expectPickupTime": "10 to 15 min",
+        "description": "Tercero Dining Commons is a uniquely renovated space with views of south campus. Featuring eight culinary platforms, diners at Tercero have plenty of options to satisfy any craving. Pacific Fusions serves up fresh, made-to-order entrees on it's signature Mongolian Wok, while Go Live prepares a wide array of seasonal pastas and entrees. Need to appease that sweet tooth? Plaza Sweets has you covered with cookies, cakes, and pastries."
+    },
+    {
+        "id": 2,
+        "restaurantImage": "https://housing.ucdavis.edu/_images/buildings/dining/segundo-dc-810-9988-1600x800.jpg",
+        "restaurantName": "Segundo Dining Commons",
+        "category": "DC",
+        "openHours": "9am - 8pm",
+        "pickupLocation": "First Floor",
+        "location": "663 Sprocket Bikeway, Davis, CA 95616",
+        "expectPickupTime": "10 to 15 min",
+        "description": "Segundo Dining Room is one of the most fascinating dining venues to reach a university campus. The dining room serves approximately 2,200 meals a day in a facility that looks more like a casual food court at a large mall featuring unique platforms that cater to customers preferred tastes. A brick oven featuring fresh pizza in Saucy to vegetarian delights and all-time favorite sandwiches and salads at the Bistro give students a variety of culinary options for any desire. It's like having eight restaurants under one roof!"
+        
+    },
+    {
+        "id": 3,
+        "restaurantImage": "https://housing.ucdavis.edu/_images/buildings/dining/Cuarto_DC_IMG_4826_360px.jpg",
+        "restaurantName": "Cuarto Dining Commons",
+        "category": "DC",
+        "openHours": "9am - 8pm",
+        "pickupLocation": "First Floor",
+        "location": "550 Oxford Cir, Davis, CA 95616",
+        "expectPickupTime": "10 to 15 min",
+        "description": "Welcome to UC Davis' spotlight dining facility showcasing sustainable food solutions."
+    },
+    {
+        "id": 4,
+        "restaurantImage": "https://housing.ucdavis.edu/_images/buildings/photographs/latitude-interior-17.png",
+        "restaurantName": "Latitude",
+        "category": "Restaurants",
+        "openHours": "11am - 8pm",
+        "pickupLocation": "First Floor",
+        "location": "175 Bioletti Way, Davis, CA 95616",
+        "expectPickupTime": "15 to 20 min",
+        "description": "Latitude restaurant celebrates the diversity of the UC Davis community by featuring an exquisite menu of international dishes scratch-made from fresh, locally-sourced ingredients. Menus change daily. Aggie Cash Plans are welcome—and encouraged!—along with credit cards and cash; pay at the door and come enjoy as much as you care to eat."
+    },
+    {
+        "id": 5,
+        "restaurantImage": "https://housing.ucdavis.edu/_images/banners/gunrock-banner-1600x600.jpg",
+        "restaurantName": "The Gunrock",
+        "category": "Restaurants",
+        "openHours": "11:30am - 5:30pm",
+        "pickupLocation": "First Floor",
+        "location": "482 Hutchison Dr, Davis, CA 95616",
+        "expectPickupTime": "15 to 20 min",
+        "description": "featuring Sudwerk Brewing Co."
+    },
+    {
+        "id": 6,
+        "restaurantImage": "https://scrubscafe.ucdavis.edu/sites/g/files/dgvnsk681/files/styles/sf_hero_banner/public/media/images/Scrubs-cafe-1.jpg?h=8e58fdb5&itok=miz-o6vg",
+        "restaurantName": "Scrubs Cafe",
+        "category": "Restaurants",
+        "openHours": "8am - 2:30pm",
+        "pickupLocation": "First Floor",
+        "location": "976 Garrod Dr, Davis, CA 95616",
+        "expectPickupTime": "15 to 20 min",
+        "description": ""
+    },
+    {
+        "id": 7,
+        "restaurantImage": "https://housing.ucdavis.edu/_images/buildings/dining/peets-coffee-silo-810_1376-1600x800.jpg",
+        "restaurantName": "Peet's Coffee at the Silo",
+        "category": "Silo, Coffee",
+        "openHours": "7am - 7pm",
+        "pickupLocation": "First Floor",
+        "location": "420 Hutchison Dr, Davis, CA 95616",
+        "expectPickupTime": "15 to 20 min",
+        "description": ""
+    },
+    {
+        "id": 8,
+        "restaurantImage": "https://housing.ucdavis.edu/_images/dining/spokes-grill/rally-cross-spokes-1214-sm.png",
+        "restaurantName": "Spokes Grill",
+        "category": "Silo",
+        "openHours": "10:30am - 5:30pm",
+        "pickupLocation": "First Floor",
+        "location": "420 Hutchison Dr, Davis, CA",
+        "expectPickupTime": "15 to 20 min",
+        "description": "Spokes Grill prepares signature burgers made with 100% local Harris Ranch Beef, sides, drinks and dessert. Spokes Grill features limited-time specials—check back often to see what the current specials are."
+    },
+    {
+        "id": 9,
+        "restaurantImage": "https://housing.ucdavis.edu/_images/dining/crepe-bistro-borrowed.jpg",
+        "restaurantName": "Crepe Bistro",
+        "category": "Silo",
+        "openHours": "10am - 3pm",
+        "pickupLocation": "First Floor",
+        "location": "420 Hutchison Dr, Davis, CA 95616",
+        "expectPickupTime": "15 to 20 min",
+        "description": ""
+    },
+    {
+        "id": 10,
+        "restaurantImage": "https://housing.ucdavis.edu/_images/dining/coffee/peets-ARC-810_1849-1600x800.jpg",
+        "restaurantName": "Peet's Coffee at the ARC",
+        "category": "Coffee",
+        "openHours": "8am - 8pm",
+        "pickupLocation": "First Floor",
+        "location": "232 Shields Ave, Davis, CA 95616",
+        "expectPickupTime": "15 to 20 min",
+        "description": ""
+    },
+    {
+        "id": 11,
+        "restaurantImage": "https://housing.ucdavis.edu/_images/dining/logos/king-hall-coffee.svg",
+        "restaurantName": "King Hall",
+        "category": "Coffee",
+        "openHours": "8am - 2pm",
+        "pickupLocation": "First Floor",
+        "location": "400 Mrak Hall Dr, Davis, CA 95616",
+        "expectPickupTime": "15 to 20 min",
+        "description": ""
+    },
+    {
+        "id": 12,
+        "restaurantImage": "https://housing.ucdavis.edu/_images/dining/logos/california-coffee.svg",
+        "restaurantName": "California Coffee",
+        "category": "Coffee",
+        "openHours": "7:30am - 2pm",
+        "pickupLocation": "First Floor",
+        "location": "205 California Ave, Davis, CA 95616",
+        "expectPickupTime": "15 to 20 min",
+        "description": ""
+    }
+]
+ 
+ 
+ 

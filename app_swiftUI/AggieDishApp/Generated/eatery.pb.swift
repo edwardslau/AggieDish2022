@@ -25,14 +25,14 @@ struct Model_Eatery {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var mid: SwiftProtobuf.Google_Protobuf_Int64Value {
-    get {return _storage._mid ?? SwiftProtobuf.Google_Protobuf_Int64Value()}
-    set {_uniqueStorage()._mid = newValue}
+  var id: SwiftProtobuf.Google_Protobuf_StringValue {
+    get {return _storage._id ?? SwiftProtobuf.Google_Protobuf_StringValue()}
+    set {_uniqueStorage()._id = newValue}
   }
-  /// Returns true if `mid` has been explicitly set.
-  var hasMid: Bool {return _storage._mid != nil}
-  /// Clears the value of `mid`. Subsequent reads from it will return its default value.
-  mutating func clearMid() {_uniqueStorage()._mid = nil}
+  /// Returns true if `id` has been explicitly set.
+  var hasID: Bool {return _storage._id != nil}
+  /// Clears the value of `id`. Subsequent reads from it will return its default value.
+  mutating func clearID() {_uniqueStorage()._id = nil}
 
   /// The name of the eatery, e.g., "Segundo Dining Commons."
   var name: SwiftProtobuf.Google_Protobuf_StringValue {
@@ -44,10 +44,10 @@ struct Model_Eatery {
   /// Clears the value of `name`. Subsequent reads from it will return its default value.
   mutating func clearName() {_uniqueStorage()._name = nil}
 
-  /// The primary cuisine associated with the eatery.
-  var cuisine: Model_Cuisine {
-    get {return _storage._cuisine}
-    set {_uniqueStorage()._cuisine = newValue}
+  /// The category associated with the eatery.
+  var category: [Model_Category] {
+    get {return _storage._category}
+    set {_uniqueStorage()._category = newValue}
   }
 
   /// The latitude and longitude that describe the eatery's location.
@@ -70,6 +70,16 @@ struct Model_Eatery {
   var hasLocation: Bool {return _storage._location != nil}
   /// Clears the value of `location`. Subsequent reads from it will return its default value.
   mutating func clearLocation() {_uniqueStorage()._location = nil}
+
+  /// Address of the eatery, e.g., "232 Shields Ave, Davis, CA 95616."
+  var address: SwiftProtobuf.Google_Protobuf_StringValue {
+    get {return _storage._address ?? SwiftProtobuf.Google_Protobuf_StringValue()}
+    set {_uniqueStorage()._address = newValue}
+  }
+  /// Returns true if `address` has been explicitly set.
+  var hasAddress: Bool {return _storage._address != nil}
+  /// Clears the value of `address`. Subsequent reads from it will return its default value.
+  mutating func clearAddress() {_uniqueStorage()._address = nil}
 
   /// The eatery's payment information.
   var paymentInfo: Model_PaymentInfo {
@@ -112,7 +122,7 @@ struct Model_Eatery {
   /// Clears the value of `imageURL`. Subsequent reads from it will return its default value.
   mutating func clearImageURL() {_uniqueStorage()._imageURL = nil}
 
-  /// 1 through 3 dollar signs ($, $$, $$$)
+  /// 1 through 3 dollar signs ($, $$, $$$).
   var priceLevel: SwiftProtobuf.Google_Protobuf_Int32Value {
     get {return _storage._priceLevel ?? SwiftProtobuf.Google_Protobuf_Int32Value()}
     set {_uniqueStorage()._priceLevel = newValue}
@@ -138,17 +148,7 @@ struct Model_Eatery {
   /// Clears the value of `menu`. Subsequent reads from it will return its default value.
   mutating func clearMenu() {_uniqueStorage()._menu = nil}
 
-  /// The eatery's id.
-  var id: SwiftProtobuf.Google_Protobuf_StringValue {
-    get {return _storage._id ?? SwiftProtobuf.Google_Protobuf_StringValue()}
-    set {_uniqueStorage()._id = newValue}
-  }
-  /// Returns true if `id` has been explicitly set.
-  var hasID: Bool {return _storage._id != nil}
-  /// Clears the value of `id`. Subsequent reads from it will return its default value.
-  mutating func clearID() {_uniqueStorage()._id = nil}
-
-  /// The description of the eatery
+  /// The description of the eatery.
   var description_p: SwiftProtobuf.Google_Protobuf_StringValue {
     get {return _storage._description_p ?? SwiftProtobuf.Google_Protobuf_StringValue()}
     set {_uniqueStorage()._description_p = newValue}
@@ -158,16 +158,8 @@ struct Model_Eatery {
   /// Clears the value of `description_p`. Subsequent reads from it will return its default value.
   mutating func clearDescription_p() {_uniqueStorage()._description_p = nil}
 
-  /// The category or type of the eatery
-  var category: SwiftProtobuf.Google_Protobuf_StringValue {
-    get {return _storage._category ?? SwiftProtobuf.Google_Protobuf_StringValue()}
-    set {_uniqueStorage()._category = newValue}
-  }
-  /// Returns true if `category` has been explicitly set.
-  var hasCategory: Bool {return _storage._category != nil}
-  /// Clears the value of `category`. Subsequent reads from it will return its default value.
-  mutating func clearCategory() {_uniqueStorage()._category = nil}
-
+  /// A short, user-facing representation of the eatery's pick up location, 
+  /// e.g., "First Floor." The precision of the location can vary for each eatery.
   var pickupLocation: SwiftProtobuf.Google_Protobuf_StringValue {
     get {return _storage._pickupLocation ?? SwiftProtobuf.Google_Protobuf_StringValue()}
     set {_uniqueStorage()._pickupLocation = newValue}
@@ -176,24 +168,6 @@ struct Model_Eatery {
   var hasPickupLocation: Bool {return _storage._pickupLocation != nil}
   /// Clears the value of `pickupLocation`. Subsequent reads from it will return its default value.
   mutating func clearPickupLocation() {_uniqueStorage()._pickupLocation = nil}
-
-  var expectedPickupTime: SwiftProtobuf.Google_Protobuf_StringValue {
-    get {return _storage._expectedPickupTime ?? SwiftProtobuf.Google_Protobuf_StringValue()}
-    set {_uniqueStorage()._expectedPickupTime = newValue}
-  }
-  /// Returns true if `expectedPickupTime` has been explicitly set.
-  var hasExpectedPickupTime: Bool {return _storage._expectedPickupTime != nil}
-  /// Clears the value of `expectedPickupTime`. Subsequent reads from it will return its default value.
-  mutating func clearExpectedPickupTime() {_uniqueStorage()._expectedPickupTime = nil}
-
-  var openHours: SwiftProtobuf.Google_Protobuf_StringValue {
-    get {return _storage._openHours ?? SwiftProtobuf.Google_Protobuf_StringValue()}
-    set {_uniqueStorage()._openHours = newValue}
-  }
-  /// Returns true if `openHours` has been explicitly set.
-  var hasOpenHours: Bool {return _storage._openHours != nil}
-  /// Clears the value of `openHours`. Subsequent reads from it will return its default value.
-  mutating func clearOpenHours() {_uniqueStorage()._openHours = nil}
 
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -209,32 +183,30 @@ fileprivate let _protobuf_package = "model"
 extension Model_Eatery: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Eatery"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "mid"),
+    1: .same(proto: "id"),
     2: .same(proto: "name"),
-    3: .same(proto: "cuisine"),
+    3: .same(proto: "category"),
     4: .same(proto: "coordinates"),
     5: .same(proto: "location"),
-    6: .standard(proto: "payment_info"),
-    7: .same(proto: "rating"),
-    8: .standard(proto: "contact_info"),
-    9: .standard(proto: "image_url"),
-    10: .standard(proto: "price_level"),
-    11: .standard(proto: "day_open"),
-    12: .same(proto: "menu"),
-    13: .same(proto: "id"),
+    6: .same(proto: "address"),
+    7: .standard(proto: "payment_info"),
+    8: .same(proto: "rating"),
+    9: .standard(proto: "contact_info"),
+    10: .standard(proto: "image_url"),
+    11: .standard(proto: "price_level"),
+    12: .standard(proto: "day_open"),
+    13: .same(proto: "menu"),
     14: .same(proto: "description"),
-    15: .same(proto: "category"),
     16: .standard(proto: "pickup_location"),
-    17: .standard(proto: "expected_pickup_time"),
-    18: .same(proto: "openHours"),
   ]
 
   fileprivate class _StorageClass {
-    var _mid: SwiftProtobuf.Google_Protobuf_Int64Value? = nil
+    var _id: SwiftProtobuf.Google_Protobuf_StringValue? = nil
     var _name: SwiftProtobuf.Google_Protobuf_StringValue? = nil
-    var _cuisine: Model_Cuisine = .american
+    var _category: [Model_Category] = []
     var _coordinates: Google_Type_LatLng? = nil
     var _location: SwiftProtobuf.Google_Protobuf_StringValue? = nil
+    var _address: SwiftProtobuf.Google_Protobuf_StringValue? = nil
     var _paymentInfo: Model_PaymentInfo? = nil
     var _rating: Model_RatingInfo? = nil
     var _contactInfo: Model_ContactInfo? = nil
@@ -242,23 +214,20 @@ extension Model_Eatery: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
     var _priceLevel: SwiftProtobuf.Google_Protobuf_Int32Value? = nil
     var _dayOpen: [Model_DayOpen] = []
     var _menu: Model_Menu? = nil
-    var _id: SwiftProtobuf.Google_Protobuf_StringValue? = nil
     var _description_p: SwiftProtobuf.Google_Protobuf_StringValue? = nil
-    var _category: SwiftProtobuf.Google_Protobuf_StringValue? = nil
     var _pickupLocation: SwiftProtobuf.Google_Protobuf_StringValue? = nil
-    var _expectedPickupTime: SwiftProtobuf.Google_Protobuf_StringValue? = nil
-    var _openHours: SwiftProtobuf.Google_Protobuf_StringValue? = nil
 
     static let defaultInstance = _StorageClass()
 
     private init() {}
 
     init(copying source: _StorageClass) {
-      _mid = source._mid
+      _id = source._id
       _name = source._name
-      _cuisine = source._cuisine
+      _category = source._category
       _coordinates = source._coordinates
       _location = source._location
+      _address = source._address
       _paymentInfo = source._paymentInfo
       _rating = source._rating
       _contactInfo = source._contactInfo
@@ -266,12 +235,8 @@ extension Model_Eatery: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
       _priceLevel = source._priceLevel
       _dayOpen = source._dayOpen
       _menu = source._menu
-      _id = source._id
       _description_p = source._description_p
-      _category = source._category
       _pickupLocation = source._pickupLocation
-      _expectedPickupTime = source._expectedPickupTime
-      _openHours = source._openHours
     }
   }
 
@@ -290,24 +255,21 @@ extension Model_Eatery: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
         // allocates stack space for every case branch when no optimizations are
         // enabled. https://github.com/apple/swift-protobuf/issues/1034
         switch fieldNumber {
-        case 1: try { try decoder.decodeSingularMessageField(value: &_storage._mid) }()
+        case 1: try { try decoder.decodeSingularMessageField(value: &_storage._id) }()
         case 2: try { try decoder.decodeSingularMessageField(value: &_storage._name) }()
-        case 3: try { try decoder.decodeSingularEnumField(value: &_storage._cuisine) }()
+        case 3: try { try decoder.decodeRepeatedEnumField(value: &_storage._category) }()
         case 4: try { try decoder.decodeSingularMessageField(value: &_storage._coordinates) }()
         case 5: try { try decoder.decodeSingularMessageField(value: &_storage._location) }()
-        case 6: try { try decoder.decodeSingularMessageField(value: &_storage._paymentInfo) }()
-        case 7: try { try decoder.decodeSingularMessageField(value: &_storage._rating) }()
-        case 8: try { try decoder.decodeSingularMessageField(value: &_storage._contactInfo) }()
-        case 9: try { try decoder.decodeSingularMessageField(value: &_storage._imageURL) }()
-        case 10: try { try decoder.decodeSingularMessageField(value: &_storage._priceLevel) }()
-        case 11: try { try decoder.decodeRepeatedMessageField(value: &_storage._dayOpen) }()
-        case 12: try { try decoder.decodeSingularMessageField(value: &_storage._menu) }()
-        case 13: try { try decoder.decodeSingularMessageField(value: &_storage._id) }()
+        case 6: try { try decoder.decodeSingularMessageField(value: &_storage._address) }()
+        case 7: try { try decoder.decodeSingularMessageField(value: &_storage._paymentInfo) }()
+        case 8: try { try decoder.decodeSingularMessageField(value: &_storage._rating) }()
+        case 9: try { try decoder.decodeSingularMessageField(value: &_storage._contactInfo) }()
+        case 10: try { try decoder.decodeSingularMessageField(value: &_storage._imageURL) }()
+        case 11: try { try decoder.decodeSingularMessageField(value: &_storage._priceLevel) }()
+        case 12: try { try decoder.decodeRepeatedMessageField(value: &_storage._dayOpen) }()
+        case 13: try { try decoder.decodeSingularMessageField(value: &_storage._menu) }()
         case 14: try { try decoder.decodeSingularMessageField(value: &_storage._description_p) }()
-        case 15: try { try decoder.decodeSingularMessageField(value: &_storage._category) }()
         case 16: try { try decoder.decodeSingularMessageField(value: &_storage._pickupLocation) }()
-        case 17: try { try decoder.decodeSingularMessageField(value: &_storage._expectedPickupTime) }()
-        case 18: try { try decoder.decodeSingularMessageField(value: &_storage._openHours) }()
         default: break
         }
       }
@@ -320,14 +282,14 @@ extension Model_Eatery: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
       // allocates stack space for every if/case branch local when no optimizations
       // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
       // https://github.com/apple/swift-protobuf/issues/1182
-      try { if let v = _storage._mid {
+      try { if let v = _storage._id {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
       } }()
       try { if let v = _storage._name {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
       } }()
-      if _storage._cuisine != .american {
-        try visitor.visitSingularEnumField(value: _storage._cuisine, fieldNumber: 3)
+      if !_storage._category.isEmpty {
+        try visitor.visitPackedEnumField(value: _storage._category, fieldNumber: 3)
       }
       try { if let v = _storage._coordinates {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
@@ -335,44 +297,35 @@ extension Model_Eatery: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
       try { if let v = _storage._location {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
       } }()
-      try { if let v = _storage._paymentInfo {
+      try { if let v = _storage._address {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
       } }()
-      try { if let v = _storage._rating {
+      try { if let v = _storage._paymentInfo {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
       } }()
-      try { if let v = _storage._contactInfo {
+      try { if let v = _storage._rating {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
       } }()
-      try { if let v = _storage._imageURL {
+      try { if let v = _storage._contactInfo {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
       } }()
-      try { if let v = _storage._priceLevel {
+      try { if let v = _storage._imageURL {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 10)
       } }()
+      try { if let v = _storage._priceLevel {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 11)
+      } }()
       if !_storage._dayOpen.isEmpty {
-        try visitor.visitRepeatedMessageField(value: _storage._dayOpen, fieldNumber: 11)
+        try visitor.visitRepeatedMessageField(value: _storage._dayOpen, fieldNumber: 12)
       }
       try { if let v = _storage._menu {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 12)
-      } }()
-      try { if let v = _storage._id {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 13)
       } }()
       try { if let v = _storage._description_p {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 14)
       } }()
-      try { if let v = _storage._category {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 15)
-      } }()
       try { if let v = _storage._pickupLocation {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 16)
-      } }()
-      try { if let v = _storage._expectedPickupTime {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 17)
-      } }()
-      try { if let v = _storage._openHours {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 18)
       } }()
     }
     try unknownFields.traverse(visitor: &visitor)
@@ -383,11 +336,12 @@ extension Model_Eatery: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
         let rhs_storage = _args.1
-        if _storage._mid != rhs_storage._mid {return false}
+        if _storage._id != rhs_storage._id {return false}
         if _storage._name != rhs_storage._name {return false}
-        if _storage._cuisine != rhs_storage._cuisine {return false}
+        if _storage._category != rhs_storage._category {return false}
         if _storage._coordinates != rhs_storage._coordinates {return false}
         if _storage._location != rhs_storage._location {return false}
+        if _storage._address != rhs_storage._address {return false}
         if _storage._paymentInfo != rhs_storage._paymentInfo {return false}
         if _storage._rating != rhs_storage._rating {return false}
         if _storage._contactInfo != rhs_storage._contactInfo {return false}
@@ -395,12 +349,8 @@ extension Model_Eatery: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementat
         if _storage._priceLevel != rhs_storage._priceLevel {return false}
         if _storage._dayOpen != rhs_storage._dayOpen {return false}
         if _storage._menu != rhs_storage._menu {return false}
-        if _storage._id != rhs_storage._id {return false}
         if _storage._description_p != rhs_storage._description_p {return false}
-        if _storage._category != rhs_storage._category {return false}
         if _storage._pickupLocation != rhs_storage._pickupLocation {return false}
-        if _storage._expectedPickupTime != rhs_storage._expectedPickupTime {return false}
-        if _storage._openHours != rhs_storage._openHours {return false}
         return true
       }
       if !storagesAreEqual {return false}

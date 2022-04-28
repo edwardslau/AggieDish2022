@@ -46,7 +46,7 @@ struct Model_PaymentInfo {
   /// Clears the value of `acceptsCreditCard`. Subsequent reads from it will return its default value.
   mutating func clearAcceptsCreditCard() {self._acceptsCreditCard = nil}
 
-  /// Whether the eatery accepts payment with cash equivalent methods.
+  /// Whether the eatery accepts payment with cash-equivalent methods.
   var acceptsCashEquivalent: SwiftProtobuf.Google_Protobuf_BoolValue {
     get {return _acceptsCashEquivalent ?? SwiftProtobuf.Google_Protobuf_BoolValue()}
     set {_acceptsCashEquivalent = newValue}

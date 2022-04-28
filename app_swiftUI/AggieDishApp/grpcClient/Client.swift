@@ -34,17 +34,66 @@ func getEatery(client: Model_ServiceClient, lat: Double , lng: Double) -> [Eater
 	call.response.whenSuccess{response in
 		print("Call Succeeded with response\n\(response)")
 			for eatery in response.eateries{
-				var newEatery = EateryCard()
-				newEatery.id = Int(eatery.mid.value)
-				newEatery.restaurantName = eatery.name.value
-				newEatery.restaurantImage = eatery.imageURL.value
-				newEatery.category = eatery.category.value
-				newEatery.openHours = eatery.openHours.value
-				newEatery.pickupLocation = eatery.pickupLocation.value
-				newEatery.description = eatery.description_p.value
-				newEatery.expectPickupTime = eatery.expectedPickupTime.value
-				newEatery.location = eatery.location.value
-				newCards.append(newEatery)
+              var dayOpenIn = [DayOpen]()
+              var timeRangeIn = [TimeRange]()
+              
+              for dayOpen in eatery.dayOpen {
+                timeRangeIn = [TimeRange]()
+                for timeRange in dayOpen.timeRangeOpen {
+                  timeRangeIn.append(TimeRange(openTime: timeRange.openTime, closeTime: timeRange.closeTime))
+                }
+                dayOpenIn.append(DayOpen(dayOpen: timeRangeIn))
+              }
+              
+              
+              var menuDayIn = [MenuDay]()
+              for menuDay in eatery.menu.menuDay {
+                var foodProductIn = [FoodProduct]()
+                for product in menuDay.foodProduct {
+                  var customizationIn = [Customization]()
+                  for customization in product.customization {
+                    var choices = [CustomizationChoice]()
+                    for choice in customization.choices {
+                      choices.append(CustomizationChoice(name: choice.name,
+                                                         price: choice.price))
+                    }
+                    customizationIn.append(Customization(category: customization.category,
+                                                         minPick: customization.minPick,
+                                                         maxPick: customization.maxPick,
+                                                         choices: choices))
+                  }
+                  var ingredientsIn = [Ingredient]()
+                  for ingredient in product.ingredients {
+                    ingredientsIn.append(Ingredient(name: ingredient.name))
+                  }
+                  var allergensIn = [Allergen]()
+                  for allergen in product.allergens {
+                    allergensIn.append(Allergen(name: allergen.name))
+                  }
+                  
+                  foodProductIn.append(FoodProduct(id: product.id,
+                                                   name: product.name,
+                                                   price: product.price,
+                                                   customization: customizationIn,
+                                                   description: product.description_p,
+                                                   ingredients: ingredientsIn,
+                                                   allergens: allergensIn))
+                }
+                menuDayIn.append(MenuDay(day: menuDay.day, foodProduct: foodProductIn))
+              }
+              var menuIn = MenuModel(menuDay: menuDayIn)
+              
+//              eatery.menu
+              var newEatery = EateryCard(id: eatery.id.value,
+                                         restaurantName: eatery.name.value,
+                                         location: eatery.location.value,
+                                         restaurantImage: eatery.imageURL.value,
+                                         dayOpen: dayOpenIn,
+                                         menu: menuIn,
+                                         description: eatery.description_p.value,
+                                         pickupLocation: eatery.pickupLocation.value)
+//              newEatery.category = eatery.category.value
+              newCards.append(newEatery)
 			}
 		}
 	call.response.whenFailure { error in

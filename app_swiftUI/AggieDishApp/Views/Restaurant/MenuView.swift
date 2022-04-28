@@ -76,7 +76,8 @@ struct InfoView: View {
         Image(systemName: "clock")
           .padding()
           .font(Font.body.weight(.medium))
-        Text(eatery.openHours)
+//        Text(eatery.openHours)
+        Text("open hours")
       }
       .padding()
     }

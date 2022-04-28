@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "RatingInfoOuterClass";
+
+// Information about an eatery's rating.
+message RatingInfo {
+  // The star rating for the eatery, with a maximum of five stars. That is, the
+  // value of this field is clamped to [0, 5].
+  google.protobuf.FloatValue stars = 3;
+}

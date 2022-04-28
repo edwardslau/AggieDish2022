@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package model;
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "CategoryOuterClass";
+
+enum Category {
+  CATEGORY_UNSPECIFIED = 0;
+  CATEGORY_DINING_HALL = 1;
+  CATEGORY_RESTAURANT = 2;
+  CATEGORY_FOOD_COURT = 3;
+  CATEGORY_COFFEE_SHOP = 4;
+}

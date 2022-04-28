@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package model;
+
+import "protos/model/eatery.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "GetEateriesResponseOuterClass";
+
+message GetEateriesResponse {
+  // The eateries that were fetched from the query.
+  repeated Eatery eateries = 1;
+}

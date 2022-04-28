@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "GetEateryFoodProductsRequestOuterClass";
+
+message GetEateryFoodProductsRequest {
+  // The identifier of the eatery for which to retrieve the food products.
+  google.protobuf.StringValue eatery_id = 1;
+
+  // Refer to model.Menu.MenuDay.day for more information.
+  google.protobuf.StringValue day = 2;
+}

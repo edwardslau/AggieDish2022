@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "CashEquivalentOuterClass";
+
+// A cash-quivalent currency.
+//
+// Usually, each cash-equivalent currency is valid only at certain institutions.
+message CashEquivalent {
+  google.protobuf.Int64Value mid = 1;
+
+  // The name of the cash equivalent, e.g., "Aggie Cash."
+  google.protobuf.StringValue name = 2;
+}

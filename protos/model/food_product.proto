@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+import "protos/model/customization.proto";
+
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "FoodProductOuterClass";
+
+message FoodProduct {
+  google.protobuf.StringValue id = 1;
+
+  google.protobuf.StringValue name = 2;
+
+  google.protobuf.StringValue price = 3;
+
+  repeated Customization customization = 4;
+
+  google.protobuf.StringValue description = 5;
+
+  message Ingredient {
+    google.protobuf.StringValue name = 1;
+  }
+  repeated Ingredient ingredients = 6;
+
+  message Allergen {
+    google.protobuf.StringValue name = 1;
+  }
+  repeated Allergen allergens = 7;
+}

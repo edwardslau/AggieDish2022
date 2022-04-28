@@ -1,0 +1,9 @@
+# https://help.github.com/en/articles/metadata-syntax-for-github-actions
+name: 'Run Buildifier'
+description: 'Check BUILD file format using Buildifier'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+inputs:
+  fix-format-suggestion-message:
+    description: 'A message suggesting a way for the developer to fix the formatting issues.'

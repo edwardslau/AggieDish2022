@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+import "google/type/latlng.proto";
+import "google/type/phone_number.proto";
+import "protos/model/cuisine.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "GetEateriesRequestOuterClass";
+
+message GetEateriesRequest {
+  // Name (keyword) filter.
+  google.protobuf.StringValue name = 1;
+
+  // Distance filter.
+  // TODO(#66): Implement in VendorServer.java
+  google.type.LatLng user_coordinates = 2;
+  google.protobuf.DoubleValue max_distance = 3;
+
+  // Filter to include eateries with the specified star rating or higher.
+  google.protobuf.DoubleValue greater_than_stars = 4;
+
+  // Filter to include eateries with the specified star rating or lower.
+  google.protobuf.DoubleValue less_than_stars = 5;
+
+  // Phone number filter (exact match).
+  google.type.PhoneNumber phone_number = 6;
+
+  // Cuisine filter (disjunctive).
+  repeated Cuisine cuisine = 7;
+
+  // Metadata for number of results to return.
+  google.protobuf.Int32Value limit = 8;
+  google.protobuf.Int32Value skip = 9;
+}

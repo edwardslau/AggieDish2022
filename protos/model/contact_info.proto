@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+import "google/type/phone_number.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "ContactInfoOuterClass";
+
+// An eatery's contact information.
+message ContactInfo {
+  // The eatery's phone number.
+  google.type.PhoneNumber phone_number = 1;
+
+  // The eatery's email.
+  google.protobuf.StringValue email = 2;
+
+  // The eatery's website URL.
+  google.protobuf.StringValue website_url = 3;
+}

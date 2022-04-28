@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+import "protos/model/customization_choice.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "CustomizationOuterClass";
+
+  // Examples: 
+  // - FoodProduct "Burger Meal"
+  //   [
+  //     {title: "side", minPick: 1, maxPick: 3, CustomizationChoice1},     // customer must choose 1 side and can choose up to 3 sides
+  //     {title: "drink", minPick: 1, maxPick: 1, CustomizationChoice2},    // customer must choose 1 and only 1 drink
+  //     {title: "protein", minPick: 0, maxPick: 2, CustomizationChoice3},  // customer can choose up to 2 proteins
+  //      ...
+  //   ]
+message Customization {
+  // Title means the general title of the choices. For example, 
+  // if a customer orders a meal, the customization titles can be 
+  // "Select a Side", "Select a Drink", etc.
+  google.protobuf.StringValue title = 1;
+
+  // This field represents the minimun choice(s) a customer need to 
+  // choose from that customization category. The value should be 
+  // between 0 and the number of items in choice minus 1.
+  google.protobuf.Int32Value minPick = 2;
+
+  // This field represents the maximun choice(s) a customer need to 
+  // choose from that customization category. The value should be 
+  // between 1 and the number of items in choice.
+  google.protobuf.Int32Value maxPick = 3;
+
+  // This field include customization choices and corresponding add-on price.
+  repeated CustomizationChoice choice = 4;
+
+  // This field indicates whether the customization is optional or required.
+  google.protobuf.BoolValue is_optional = 5;
+}

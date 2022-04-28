@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/empty.proto";
+import "protos/add_food_product_request.proto";
+import "protos/get_eateries_request.proto";
+import "protos/get_eateries_response.proto";
+import "protos/get_eatery_food_products_request.proto";
+import "protos/get_eatery_food_products_response.proto";
+import "protos/get_food_product_request.proto";
+import "protos/get_food_product_response.proto";
+import "protos/get_order_request.proto";
+import "protos/model/eatery.proto";
+import "protos/model/order.proto";
+import "protos/submit_cart_request.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "ServiceOuterClass";
+
+service Service {
+  // development rpcs
+  rpc AddEatery(Eatery) returns (google.protobuf.Empty) {};
+  rpc AddFoodProduct(AddFoodProductRequest) returns (google.protobuf.Empty) {};
+
+  // db rpcs
+  rpc GetEateries(GetEateriesRequest) returns (GetEateriesResponse) {};
+  rpc GetEateryFoodProducts(GetEateryFoodProductsRequest) returns (GetEateryFoodProductsResponse) {};
+  rpc GetFoodProduct(GetFoodProductRequest) returns (GetFoodProductResponse) {};
+
+  // checkout rpcs
+  rpc SubmitCart(SubmitCartRequest) returns (Order) {};
+  rpc GetOrder(GetOrderRequest) returns (Order) {};
+}

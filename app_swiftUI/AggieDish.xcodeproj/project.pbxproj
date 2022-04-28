@@ -11,11 +11,14 @@
 		301366F927CF30E100AB99DB /* OrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301366F827CF30E100AB99DB /* OrderHistoryView.swift */; };
 		301366FB27CF320700AB99DB /* OrderHistoryEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301366FA27CF320700AB99DB /* OrderHistoryEmptyView.swift */; };
 		301366FD27CF321C00AB99DB /* OrderHistoryNonEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301366FC27CF321C00AB99DB /* OrderHistoryNonEmptyView.swift */; };
+		3018450F2814D04C002A80B1 /* DayOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3018450E2814D04C002A80B1 /* DayOpen.swift */; };
+		301845112814D191002A80B1 /* FoodProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301845102814D191002A80B1 /* FoodProduct.swift */; };
+		301845132814D255002A80B1 /* Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301845122814D255002A80B1 /* Customization.swift */; };
+		301845152814D4D4002A80B1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301845142814D4D4002A80B1 /* Menu.swift */; };
 		3040F31327C9DAE5002BAC71 /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040F31227C9DAE5002BAC71 /* DefaultView.swift */; };
 		3040F31727C9DB36002BAC71 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040F31627C9DB36002BAC71 /* HomeView.swift */; };
 		3040F31A27C9DB63002BAC71 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040F31927C9DB63002BAC71 /* Card.swift */; };
 		3040F31C27C9DB73002BAC71 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040F31B27C9DB73002BAC71 /* Filter.swift */; };
-		3040F31F27C9DD1B002BAC71 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040F31E27C9DD1B002BAC71 /* Restaurant.swift */; };
 		3040F32227C9DD41002BAC71 /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 3040F32127C9DD41002BAC71 /* restaurants.json */; };
 		3040F32627CC1B20002BAC71 /* UserAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040F32527CC1B20002BAC71 /* UserAccountView.swift */; };
 		3040F32827CC1B4B002BAC71 /* UserAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040F32727CC1B4B002BAC71 /* UserAuthModel.swift */; };
@@ -64,7 +67,6 @@
 		F19293DB27D31F8D00A0FC7E /* get_eatery_food_products_request.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19293C127D31F8D00A0FC7E /* get_eatery_food_products_request.pb.swift */; };
 		F19293DC27D31F8D00A0FC7E /* submit_cart_request.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19293C227D31F8D00A0FC7E /* submit_cart_request.pb.swift */; };
 		F19293DD27D31F8D00A0FC7E /* get_food_product_request.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19293C327D31F8D00A0FC7E /* get_food_product_request.pb.swift */; };
-		F19293DE27D31F8D00A0FC7E /* food_product.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19293C427D31F8D00A0FC7E /* food_product.pb.swift */; };
 		F19293DF27D31F8D00A0FC7E /* order_status.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19293C527D31F8D00A0FC7E /* order_status.pb.swift */; };
 		F19A36EB27D4B0DF006F2DB8 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19A36EA27D4B0DF006F2DB8 /* Client.swift */; };
 /* End PBXBuildFile section */
@@ -75,11 +77,14 @@
 		301366F827CF30E100AB99DB /* OrderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryView.swift; sourceTree = "<group>"; };
 		301366FA27CF320700AB99DB /* OrderHistoryEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryEmptyView.swift; sourceTree = "<group>"; };
 		301366FC27CF321C00AB99DB /* OrderHistoryNonEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryNonEmptyView.swift; sourceTree = "<group>"; };
+		3018450E2814D04C002A80B1 /* DayOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOpen.swift; sourceTree = "<group>"; };
+		301845102814D191002A80B1 /* FoodProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodProduct.swift; sourceTree = "<group>"; };
+		301845122814D255002A80B1 /* Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customization.swift; sourceTree = "<group>"; };
+		301845142814D4D4002A80B1 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		3040F31227C9DAE5002BAC71 /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
 		3040F31627C9DB36002BAC71 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3040F31927C9DB63002BAC71 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		3040F31B27C9DB73002BAC71 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
-		3040F31E27C9DD1B002BAC71 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		3040F32127C9DD41002BAC71 /* restaurants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
 		3040F32527CC1B20002BAC71 /* UserAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountView.swift; sourceTree = "<group>"; };
 		3040F32727CC1B4B002BAC71 /* UserAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthModel.swift; sourceTree = "<group>"; };
@@ -129,7 +134,6 @@
 		F19293C127D31F8D00A0FC7E /* get_eatery_food_products_request.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = get_eatery_food_products_request.pb.swift; sourceTree = "<group>"; };
 		F19293C227D31F8D00A0FC7E /* submit_cart_request.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = submit_cart_request.pb.swift; sourceTree = "<group>"; };
 		F19293C327D31F8D00A0FC7E /* get_food_product_request.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = get_food_product_request.pb.swift; sourceTree = "<group>"; };
-		F19293C427D31F8D00A0FC7E /* food_product.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = food_product.pb.swift; sourceTree = "<group>"; };
 		F19293C527D31F8D00A0FC7E /* order_status.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = order_status.pb.swift; sourceTree = "<group>"; };
 		F19A36EA27D4B0DF006F2DB8 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		F1FEECD927B3D78C002F8CF5 /* AggieDish-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AggieDish-Info.plist"; sourceTree = "<group>"; };
@@ -190,9 +194,12 @@
 		3040F31D27C9DD00002BAC71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3085C3A828188B160083FF26 /* User */,
 				F158FC8A27D7271D00373F17 /* EateryCard.swift */,
-				3040F31E27C9DD1B002BAC71 /* Restaurant.swift */,
-				3040F32727CC1B4B002BAC71 /* UserAuthModel.swift */,
+				3018450E2814D04C002A80B1 /* DayOpen.swift */,
+				301845102814D191002A80B1 /* FoodProduct.swift */,
+				301845122814D255002A80B1 /* Customization.swift */,
+				301845142814D4D4002A80B1 /* Menu.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +234,14 @@
 				AFDC463527D1A2860056A60B /* AddPaymentView.swift */,
 			);
 			path = Wallet;
+			sourceTree = "<group>";
+		};
+		3085C3A828188B160083FF26 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3040F32727CC1B4B002BAC71 /* UserAuthModel.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		3094D0CB9A93081906F96B11 /* Frameworks */ = {
@@ -323,7 +338,6 @@
 				F19293BE27D31F8D00A0FC7E /* cuisine.pb.swift */,
 				F19293BA27D31F8D00A0FC7E /* day_open.pb.swift */,
 				F19293B427D31F8C00A0FC7E /* eatery.pb.swift */,
-				F19293C427D31F8D00A0FC7E /* food_product.pb.swift */,
 				F19293B527D31F8C00A0FC7E /* get_eateries_request.pb.swift */,
 				F19293B627D31F8C00A0FC7E /* get_eateries_response.pb.swift */,
 				F19293C127D31F8D00A0FC7E /* get_eatery_food_products_request.pb.swift */,
@@ -519,22 +533,24 @@
 				F19293CA27D31F8D00A0FC7E /* menu.pb.swift in Sources */,
 				3040F32827CC1B4B002BAC71 /* UserAuthModel.swift in Sources */,
 				3040F31727C9DB36002BAC71 /* HomeView.swift in Sources */,
+				3018450F2814D04C002A80B1 /* DayOpen.swift in Sources */,
 				F19A36EB27D4B0DF006F2DB8 /* Client.swift in Sources */,
 				AFDC463627D1A2860056A60B /* AddPaymentView.swift in Sources */,
 				3040F32A27CC1D33002BAC71 /* SignInView.swift in Sources */,
-				3040F31F27C9DD1B002BAC71 /* Restaurant.swift in Sources */,
 				F19293D027D31F8D00A0FC7E /* get_eateries_response.pb.swift in Sources */,
 				F19293DA27D31F8D00A0FC7E /* payment_info.pb.swift in Sources */,
+				301845132814D255002A80B1 /* Customization.swift in Sources */,
 				301366F927CF30E100AB99DB /* OrderHistoryView.swift in Sources */,
 				F19293CD27D31F8D00A0FC7E /* rating_info.pb.swift in Sources */,
 				F19293D827D31F8D00A0FC7E /* cuisine.pb.swift in Sources */,
-				F19293DE27D31F8D00A0FC7E /* food_product.pb.swift in Sources */,
+				301845112814D191002A80B1 /* FoodProduct.swift in Sources */,
 				AFDC463227D00C5A0056A60B /* CountDownView.swift in Sources */,
 				3040F31A27C9DB63002BAC71 /* Card.swift in Sources */,
 				F19293D327D31F8D00A0FC7E /* service.grpc.swift in Sources */,
 				F19293D527D31F8D00A0FC7E /* latlng.pb.swift in Sources */,
 				304EA36F27D9548400CE0AD8 /* OrderStatusView.swift in Sources */,
 				F19293C927D31F8D00A0FC7E /* get_order_request.pb.swift in Sources */,
+				301845152814D4D4002A80B1 /* Menu.swift in Sources */,
 				F19293C827D31F8D00A0FC7E /* get_eatery_food_products_response.pb.swift in Sources */,
 				30B4400E27AE0E4B007641AF /* Extensions.swift in Sources */,
 				301366FD27CF321C00AB99DB /* OrderHistoryNonEmptyView.swift in Sources */,

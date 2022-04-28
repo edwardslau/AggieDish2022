@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "CartOuterClass";
+
+message Cart {
+  repeated google.protobuf.StringValue food_product_id = 1;
+}

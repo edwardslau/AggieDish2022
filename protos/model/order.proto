@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package model;
+
+import "google/protobuf/wrappers.proto";
+import "protos/model/cart.proto";
+import "protos/model/order_status.proto";
+
+option java_multiple_files = true;
+option java_package = "com.aggiedish.protos.model";
+option java_outer_classname = "OrderOuterClass";
+
+message Order {
+  Cart cart = 1;
+
+  OrderStatus order_status = 2;
+
+  google.protobuf.StringValue order_id = 3;
+
+  google.protobuf.StringValue user_id = 4;
+
+  google.protobuf.StringValue eatery_id = 5;
+}
